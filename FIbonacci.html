@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="Num1" onclick="Random(1)">Card1</button>
+    <p id="Card1"></p>
+    <img id="Number1" class="Carta" src="img/cover.jpeg" alt="Tarjeta 1">
+    <button id="Num1" onclick="Random(2)">Card2</button>
+    <p id="Card2"></p>
+    <img id="Number2" class="Carta" src="img/cover.jpeg" alt="Tarjeta 2">
+    <p id="Resultado"></p>
+    <img id="Number3" class="Carta" src="img/cover.jpeg" alt="Tarjeta 3">
+
+    <script>
+        let N1 = 0;
+        let N2 = 0;
+        let Serie = [2, 3, 5, 8, 13, 21]
+        function Random(Card) {
+            if(Card == 1){
+                N1 = document.getElementById("Card1").innerHTML = Math.floor(Math.random() * (11 - 1 + 1)) + 1;
+                Number1.src = "/img/"+N1+".jpg";
+            }else if (Card == 2){
+                N2 = document.getElementById("Card2").innerHTML = Math.floor(Math.random() * (11 - 1 + 1)) + 1;
+                Number2.src = "/img/"+N2+".jpg";
+                Calcular();
+            }          
+        }    
+
+        function Calcular() {
+            Resultado = N1 + N2;
+            document.getElementById("Resultado").innerHTML = Resultado;
+            if (Serie.includes(Resultado)){
+                Number3.src = "/img/"+Resultado+".jpg";
+            } 
+        }
+    </script>
+</body>
+</html>
