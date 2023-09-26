@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+}
+.Btn {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background: brown;
+    color: #fff;
+}
+
+.Campo {
+    text-align: center;
+}
+
+.Campo label {
+    color: brown;
+    text-decoration: underline;
+}
+
+.Campo textarea {
+    background-color: rgb(171, 235, 213);
+    border-radius: 10px;
+    border: 2px solid brown;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
