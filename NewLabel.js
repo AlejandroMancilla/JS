@@ -27,9 +27,21 @@ function EliminarCampo() {
 }
 
 function CambiarColor() {
-    const divs = document.getElementsByClassName('Campo');
+    const areastxt = document.getElementsByTagName('textarea');
+    Col = RandomColor();
+    for(i=0; i<areastxt.length; i++) {
+      areastxt[i].style.backgroundColor = Col;
+    }
 }
 
+function RandomColor() {
+  const Hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+    let Col = '#';
+    for(i=0; i<=5; i++) {
+      Col += Hex[Math.floor(Math.random() * (15 + 1))];
+    }
+    return Col;
+}
   // Obtener el botón de "Agregar Campo" y agregar un manejador de eventos
   const botonAgregarCampo = document.getElementById('agregarCampo');
   botonAgregarCampo.addEventListener('click', agregarCampo);
