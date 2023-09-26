@@ -1,4 +1,5 @@
 // Función para agregar un nuevo campo (etiqueta y caja de texto) al formulario
+var Col = '';
 function agregarCampo() {
     const formulario = document.getElementById('miFormulario');
   
@@ -36,7 +37,7 @@ function CambiarColor() {
 
 function RandomColor() {
   const Hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
-    let Col = '#';
+    Col = '#';
     for(i=0; i<=5; i++) {
       Col += Hex[Math.floor(Math.random() * (15 + 1))];
     }
