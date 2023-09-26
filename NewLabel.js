@@ -12,7 +12,7 @@ function agregarCampo() {
     const label = document.createElement('label');
     label.textContent = 'Etiqueta' + (formulario.children.length) + ': ';
     const textArea = document.createElement('textarea');
-    textArea.textContent = 'Campo de Texto' + (formulario.children.length);
+    textArea.placeholder = 'Campo de Texto' + (formulario.children.length);
   
     // Agregar la etiqueta y la caja de texto al formulario
     div.appendChild(label);
