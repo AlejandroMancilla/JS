@@ -14,6 +14,7 @@ function agregarCampo() {
     label.textContent = 'Etiqueta' + (formulario.children.length) + ': ';
     const textArea = document.createElement('textarea');
     textArea.placeholder = 'Campo de Texto' + (formulario.children.length);
+    textArea.style.backgroundColor = Col;
   
     // Agregar la etiqueta y la caja de texto al formulario
     div.appendChild(label);
@@ -43,6 +44,7 @@ function RandomColor() {
     }
     return Col;
 }
+
   // Obtener el botón de "Agregar Campo" y agregar un manejador de eventos
   const botonAgregarCampo = document.getElementById('agregarCampo');
   botonAgregarCampo.addEventListener('click', agregarCampo);
