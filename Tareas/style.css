@@ -5,6 +5,9 @@ header {
     padding: 1px;
     line-height: 30%;
     color: #FFFFFF;
+    border-radius: 30px;
+    margin: 0;
+    border: 2px solid #FFFFFF;
 }
 
 h1 {
@@ -28,9 +31,12 @@ p {
     margin: none;
 }
 
+body {
+    background-color: rgb(153, 155, 156);
+}
+
 .container {
     display: flex;
-    background-color: rgb(153, 155, 156);
 }
 
 .Formulario {
@@ -41,6 +47,7 @@ p {
     align-items: center;
     text-align: center;
     margin: 4px;
+    box-sizing: border-box;
 }
 
 .Lista {
@@ -49,7 +56,8 @@ p {
     background-color: rgb(93, 178, 218);
     width: 60%;
     margin: 4px;
-    padding: none;
+    padding: 10px 10px;
+    box-sizing: border-box;
     align-items: center;
     text-align: center;
 }
@@ -63,7 +71,7 @@ p {
 }
 
 #NewTask {
-    background-color: rgb(160, 207, 229); /* Green */
+    background-color: rgb(160, 207, 229);
     border: 2px solid #FFFFFF;
     border-radius: 10px;
     color: rgb(0, 0, 0);
@@ -73,7 +81,7 @@ p {
     display: inline-block;
     margin: 10px;
     cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
 
@@ -95,5 +103,28 @@ button:hover {
 
 .mycheck {
     width: 80px;
-
 }
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(93, 178, 218);
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .container {
+        display: block;
+    }
+    .Formulario {
+        width: 100%;
+        margin: 0;
+    }
+    .Lista {
+        width: 100%;
+        margin: 0;
+    }
+  }
